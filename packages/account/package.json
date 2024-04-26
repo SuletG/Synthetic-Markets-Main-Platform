@@ -17,7 +17,7 @@
         "start": "npm run test && npm run serve",
         "serve": "echo \"Serving...\" && NODE_OPTIONS='-r ts-node/register' webpack --progress --watch --config \"./build/webpack.config.js\"",
         "build": "f () { NODE_OPTIONS='-r ts-node/register' webpack --config \"./build/webpack.config.js\" --env base=$1;}; f",
-        "build:travis": "rimraf dist && webpack --config \"./build/webpack.config.js\"  --mode=production",
+        "build:travis": "rimraf dist && webpack --config \"./build/webpack.config.js\"  --mode=${NODE_ENV:-production}",
         "test": "echo \"No test specified\"",
         "test:eslint": "eslint \"./src/**/*.?(js|jsx|ts|tsx)\"",
         "deploy": "echo \"No deploy specified\"",

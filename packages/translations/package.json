@@ -16,7 +16,7 @@
     "scripts": {
         "build": "echo \"No build specified\"",
         "build:travis": "echo \"No build:travis specified\"",
-        "serve": "rimraf lib && cross-env BUILD_MODE='serve' webpack --mode=production --progress --watch",
+        "serve": "rimraf lib && cross-env BUILD_MODE='serve' webpack --mode=${NODE_ENV:-production} --progress --watch",
         "start": "rimraf lib && npm run test && npm run serve",
         "translate": "sh ./scripts/update-translations.sh",
         "deploy": "echo \"No deploy specified\"",

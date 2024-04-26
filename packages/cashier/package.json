@@ -28,7 +28,7 @@
         "test": "echo \"No test specified\"",
         "test:eslint": "eslint \"./src/**/*.?(js|jsx|ts|tsx)\"",
         "serve": "echo \"Serving...\" && NODE_OPTIONS='-r ts-node/register' webpack --progress --watch --config \"./build/webpack.config.js\"",
-        "build:travis": "rimraf dist && webpack --config \"./build/webpack.config.js\"  --mode=production",
+        "build:travis": "rimraf dist && webpack --config \"./build/webpack.config.js\"  --mode=${NODE_ENV:-production}",
         "build": "f () { NODE_OPTIONS='-r ts-node/register' webpack --config \"./build/webpack.config.js\" --env base=$1;}; f"
     },
     "bugs": {

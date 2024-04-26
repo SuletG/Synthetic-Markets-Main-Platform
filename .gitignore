@@ -23,9 +23,9 @@ packages/appstore/lib/
 packages/appstore/.out
 packages/account-v2/src/modules/scripts/webpack-entries.json
 packages/wallets/src/translations/messages.json
-.env
 nx-cloud.env
 test-results/
 playwright-report/
 playwright/.cache/
 .nx
+.history/
